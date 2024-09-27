@@ -1,0 +1,15 @@
+[Unit]
+Description=Run setup script at startup
+
+[Service]
+ExecStart=/home/ubuntu/setup_script.sh
+
+[Install]
+WantedBy=multi-user.target
+
+
+#Then run as below
+
+#sudo systemctl daemon-reload
+#sudo systemctl enable setup_script.service
+#sudo systemctl start setup_script.service
